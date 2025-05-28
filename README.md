@@ -1,29 +1,44 @@
-# MCCS-project-for-internship-at-Thales
+# MCCS: Mini Cloud Cryptographic Key Management System
 
-This is a self assigned project that will mimic or show basic functionalities of CCKM(CipherTrust Cloud Key Management Service) which is a part of CipherTrust Manager licensed and owned by Thales Group. All the credit goes to Thales Group Noida branch and my superiors who all inspired me to make this project.
-All the information displayed in the project is subject to my own understanding and knowledge and is not related to Thales by any means.
+## Introduction
 
-The project and its belongings are owned by me.
-Lastly I would like to thank Thales group Noida branch and my team members for helping me build this project in its entirety.  
+MCCS is a lightweight system inspired by Thales Group's CipherTrust Cloud Key Management (CCKM). It aims to replicate core functionalities such as key generation, secure storage, RBAC, key rotation, and audit logging.
 
-**PROJECT DESCRIPTION**
-MCCS is a lightweight Cloud Cryptographic Key Generation and Management System that can mimic few of the functionalities of CCKM owned and licensed by Thales Group. It depicts and performs the core functions of CCKM.
-The project uses a local domain but is designed to be scalable if needed. This project is developed for educational purpose only and is not meant to be launched or deployed for personal interests.
+> **Disclaimer**: This project is independently developed and is not affiliated with or endorsed by Thales Group.
+
+## Features
+
+- RSA and AES key generation
+- Encrypted credential storage
+- Role-Based Access Control (RBAC)
+- Key rotation policies
+- Comprehensive audit logging
+- Interface
 
 
-**Project Development and deliverabels**
+## Installation
 
-This project is targetted to deliver  
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Dhruv-Chauhan0507/MCCS-project-for-internship-at-Thales.git
 
--Cryptographic Key Generation & Management  
+2. Navigate to the project directory:
+   cd MCCS-project-for-internship-at-Thales
 
--Credential Vault + RBAC  
+3. Install libraries and dependencies:
+   pip install -r requirements.txt
 
--Key Rotation  
+## Usage
 
--Audit Logging  
+Generate a new Key:  
 
--Interface
+Update a Key:  
+
+Add a credential:
+
+## **LICENSE**
+
+
 
 
 
