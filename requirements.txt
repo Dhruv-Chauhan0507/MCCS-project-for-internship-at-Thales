@@ -1,0 +1,10 @@
+cryptography
+sqlalchemy
+python-dotenv
+rich
+bcrypt
+click
+tkinter
+pytest
+pandas
+flask
