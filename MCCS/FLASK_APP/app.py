@@ -5,6 +5,11 @@ from routes.vault_routes import vault_bp
 from routes.user_routes import user_bp
 from routes.credentials_routes import credential_bp
 from routes.advisor_routes import advisor_bp
+from init_db import initialize_all_databases
+
+# Initialize DBs before Flask starts
+initialize_all_databases()
+
 
 def create_app():
     app = Flask(__name__)

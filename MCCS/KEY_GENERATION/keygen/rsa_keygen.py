@@ -1,7 +1,9 @@
 from cryptography.hazmat.primitives.asymmetric import rsa
 from cryptography.hazmat.primitives import serialization
 from KEY_GENERATION.keygen.utils import build_key_metadata, log
+import os
 
+DEFAULT_DIR = os.path.join(os.path.dirname(__file__), "..", "keys", "rsa")
 
 def generate_rsa_key_pair(key_size=2048, owner="admin", directory ="/KEY_GENERATION/keys"):
     # Generate RSA private key

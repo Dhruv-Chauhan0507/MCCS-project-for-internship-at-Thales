@@ -1,13 +1,8 @@
 import sqlite3
 from datetime import datetime
 import bcrypt
+from config import DB_PATH
 
-import os
-
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DB_PATH = os.path.join(BASE_DIR, "VAULT", "DB", "vault.db")
-
-DB_PATH = "VAULT/DB/vault.db"
 
 # --- USER REGISTRATION ---
 def register_user(username, password, role='User'):

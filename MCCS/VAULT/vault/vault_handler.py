@@ -2,16 +2,11 @@ import sqlite3
 from cryptography.fernet import Fernet
 from datetime import datetime
 from VAULT.utils_vault import encrypt_data, decrypt_data, build_key_metadata
-from VAULT.vault.DB_init import initialize_vault_db
+from config import DB_PATH
 
-import os
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DB_PATH = os.path.join(BASE_DIR, "VAULT", "DB", "vault.db")
 
-initialize_vault_db()
 
-DB_PATH = "VAULT/DB/vault.db"  # Update path if needed
 
 # Store key with metadata in Vault
 def store_key_in_vault(key_type, key_bytes, owner, usage):

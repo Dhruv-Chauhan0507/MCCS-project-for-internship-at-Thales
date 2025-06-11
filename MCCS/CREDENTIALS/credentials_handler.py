@@ -2,14 +2,7 @@ import sqlite3
 from datetime import datetime
 from VAULT.utils_vault import encrypt_data, decrypt_data
 from RBAC.rbac_handler import check_permission
-
-import os
-
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DB_PATH = os.path.join(BASE_DIR, "VAULT", "DB", "vault.db")
-
-
-DB_PATH = "VAULT/DB/vault.db"
+from config import DB_PATH
 
 # --- STORE CREDENTIAL ---
 def store_credential(username, cred_name, plain_password, metadata=None):
