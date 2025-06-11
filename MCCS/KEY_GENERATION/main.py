@@ -1,6 +1,12 @@
 from KEY_GENERATION.keygen.rsa_keygen import generate_rsa_key_pair
 from KEY_GENERATION.keygen.aes_keygen import generate_aes_key
 from KEY_GENERATION.keygen.utils import log
+import os
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent
+RSA_DIR = BASE_DIR / "KEY_GENERATION" / "keys" / "rsa"
+AES_DIR = BASE_DIR / "KEY_GENERATION" / "keys" / "aes"
 
 
 def main():
@@ -10,7 +16,7 @@ def main():
         rsa_metadata = generate_rsa_key_pair(
             key_size=2048,
             owner="admin",
-            directory="/Users/dhruvchauhan/PycharmProjects/MCCS/KEY_GENERATION/keys/rsa"
+            directory=str(RSA_DIR)
         )
         log(f"🔐 RSA Key Metadata: {rsa_metadata}")
     except Exception as e:
@@ -20,7 +26,7 @@ def main():
         aes_metadata = generate_aes_key(
             key_size=256,
             owner="admin",
-            directory="/Users/dhruvchauhan/PycharmProjects/MCCS/KEY_GENERATION/keys/aes"
+            directory=str(AES_DIR)
         )
         log(f"🔐 AES Key Metadata: {aes_metadata}")
     except Exception as e:

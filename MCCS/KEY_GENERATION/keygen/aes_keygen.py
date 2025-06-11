@@ -1,7 +1,7 @@
 import os
 from cryptography.hazmat.primitives.ciphers import algorithms
 from KEY_GENERATION.keygen.utils import build_key_metadata, log
-
+DEFAULT_DIR = os.path.join(os.path.dirname(__file__), "..", "keys", "rsa")
 
 def generate_aes_key(key_size=256, owner="admin", directory="/KEY_GENERATION/keys"):
     if key_size not in [128, 192, 256]:
